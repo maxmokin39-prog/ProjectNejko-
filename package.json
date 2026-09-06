@@ -1,0 +1,49 @@
+{
+  "name": "project-nejko",
+  "productName": "ProjectNejko",
+  "version": "0.1.0",
+  "description": "ProjectNejko Browser - Pre-Alpha V01.0.0 (Chromium-powered)",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.projectnejko.browser",
+    "productName": "ProjectNejko",
+    "copyright": "Copyright © 2026 ProjectNejko",
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
+    "portable": {
+      "artifactName": "ProjectNejko-Pre-Alpha-V01.0.0-Portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "ProjectNejko-Pre-Alpha-V01.0.0-Setup.exe"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "versionDisplay": "Pre-Alpha V01.0.0"
+    }
+  },
+  "keywords": [
+    "browser",
+    "chromium",
+    "projectnejko"
+  ],
+  "author": "ProjectNejko Team",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3"
+  }
+}
